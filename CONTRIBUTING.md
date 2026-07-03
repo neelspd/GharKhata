@@ -61,10 +61,10 @@ git checkout -b feature/your-feature-name
 ```
 
 3. Make your changes.
-4. Commit with a clear message.
+4. Commit with a clear message, preferably following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/).
 
 ```bash
-git commit -m "Add vendor settlement summary"
+git commit -m "feat(ledger): add vendor settlement summary"
 ```
 
 5. Push your branch.
