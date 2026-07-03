@@ -1,0 +1,52 @@
+GharKhata
+Copyright 2026 Neel Shah
+
+=========================================================================
+NOTICE — Please read before using, distributing, or building upon this
+software.
+=========================================================================
+
+This software was designed and developed by Neel Shah, a computer
+scientist and Solutions Architect based in Vadodara, India.
+
+  <!-- Portfolio  : https://vadsystems.com -->
+  GitHub     : https://github.com/neelspd
+  LinkedIn   : https://linkedin.com/in/neelshah
+
+-------------------------------------------------------------------------
+What GharKhata is
+-------------------------------------------------------------------------
+
+GharKhata (घर + खाता — house account ledger) is an over-engineered
+digital version of the daily expense diary found in every Indian
+household. It tracks daily variable expenses (milk, laundry, vegetables),
+fixed monthly bills (newspaper, house help salary), and produces a
+settled monthly statement per payee — implemented with an append-only
+event store, a double-entry ledger engine, and a monthly close workflow.
+
+DHELA — Digital Household Expense Ledger App.
+
+-------------------------------------------------------------------------
+Attribution requirement (Apache 2.0, Section 4d)
+-------------------------------------------------------------------------
+
+If you use GharKhata — in whole or in part — in a product, service,
+research paper, course, or portfolio, you are required under the Apache
+2.0 licence to retain this NOTICE file in all distributions, including
+compiled or minified forms.
+
+Beyond the legal minimum, acknowledgement in one of the following forms
+is strongly encouraged:
+
+  Visible credit  "Built on GharKhata by Neel Shah / Vad Systems"
+  Documentation   A reference to this repository in your README or docs
+  Academic        A citation using the provided CITATION.cff file
+
+-------------------------------------------------------------------------
+No warranty
+-------------------------------------------------------------------------
+
+This software is provided "as is", without warranty of any kind, express
+or implied. See the LICENSE file for the full Apache 2.0 licence text.
+
+=========================================================================

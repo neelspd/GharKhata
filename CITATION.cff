@@ -1,0 +1,78 @@
+cff-version: 1.2.0
+
+message: >
+  If you use GharKhata in your work, please cite it using the
+  metadata from this file.
+
+type: software
+
+title: "GharKhata"
+
+abstract: >
+  GharKhata (घर + खाता — house account ledger) is an open-source,
+  over-engineered digital version of the daily expense diary found in
+  every Indian household. It implements an append-only event store,
+  a double-entry ledger engine with a database-enforced balance
+  constraint, a config-driven category and units registry, and a
+  Draft → Reviewed → Closed → Paid monthly close workflow — all behind
+  a multi-tenant REST API with a schema-per-tenant PostgreSQL design.
+  DHELA: Digital Household Expense Ledger App.
+
+authors:
+  - family-names: Shah
+    given-names: Neel
+    affiliation: "Vad Systems"
+    city: Vadodara
+    country: IN
+    # website: "https://vadsystems.com"
+
+contact:
+  - family-names: Shah
+    given-names: Neel
+    affiliation: "Vad Systems"
+    # website: "https://vadsystems.com"
+
+version: "0.1.0"
+date-released: "2026-07-02"
+
+license: Apache-2.0
+
+repository-code: "github.com/neelspd/GharKhata"
+
+keywords:
+  - household expense tracking
+  - personal finance
+  - ledger
+  - double-entry accounting
+  - event sourcing
+  - multi-tenant
+  - PostgreSQL
+  - FastAPI
+  - Indian household
+  - open source
+
+# -----------------------------------------------------------------------
+# Preferred citation formats
+# -----------------------------------------------------------------------
+
+# APA
+# Shah, N. (2026). GharKhata [Software]. Vad Systems.
+# https://github.com/neelspd/GharKhata
+
+# Chicago
+# Shah, Neel. GharKhata. Software. Vad Systems, 2026.
+# https://github.com/neelspd/GharKhata
+
+# BibTeX — copy the block below into your .bib file
+#
+# @software{shah2026gharkhat,
+#   author    = {Shah, Neel},
+#   title     = {{GharKhata}},
+#   year      = {2026},
+#   publisher = {Vad Systems},
+#   version   = {0.1.0},
+#   url       = {https://github.com/neelspd/GharKhata},
+#   note      = {Digital Household Expense Ledger App (DHELA).
+#                An over-engineered daily expense diary
+#                for the Indian household.}
+# }
