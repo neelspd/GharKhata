@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Household Ledger</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="shell">
+  <div class="sidebar">
+    <div class="brand">Household Ledger</div>
+    <div class="brand-sub">v0.1 — vanilla prototype</div>
+    <button class="nav-item active" data-screen="diary">Diary</button>
+    <button class="nav-item" data-screen="dashboard">Dashboard</button>
+    <button class="nav-item" data-screen="close">Close &amp; pay</button>
+    <button class="nav-item" data-screen="categories">Categories</button>
+  </div>
+
+  <div class="main">
+
+    <!-- ===== DIARY ===== -->
+    <section class="screen active" id="screen-diary">
+      <h1>Diary</h1>
+      <div class="screen-note">click a day to record or correct entries</div>
+
+      <div class="row-between cal-nav">
+        <button id="cal-prev">&larr;</button>
+        <span id="cal-title"></span>
+        <button id="cal-next">&rarr;</button>
+      </div>
+      <div class="grid7" id="cal-dow"></div>
+      <div class="grid7" id="cal-grid" style="margin-bottom: 22px;"></div>
+
+      <div class="panel" id="entry-panel">
+        <div class="row-between" style="margin-bottom: 10px;">
+          <strong id="entry-date" style="font-size: 13px;"></strong>
+        </div>
+        <div id="entry-rows"></div>
+        <button class="primary" id="save-entries" style="margin-top: 14px; width: 100%;">Save entries</button>
+      </div>
+
+      <div class="screen-note section-gap">Fixed monthly bills — accrue automatically</div>
+      <div class="row" style="gap: 10px;">
+        <div class="panel" id="fixed-bills-mount" style="flex: 1;"></div>
+      </div>
+    </section>
+
+    <!-- ===== DASHBOARD ===== -->
+    <section class="screen" id="screen-dashboard">
+      <h1>Dashboard</h1>
+      <div class="screen-note" id="dash-month-note"></div>
+
+      <div class="metric-grid" id="metric-grid"></div>
+
+      <div class="row" style="gap: 14px; align-items: flex-start;">
+        <div class="panel" style="flex: 1;">
+          <div class="screen-note" style="margin-bottom: 10px;">Category breakdown</div>
+          <div id="breakdown-list"></div>
+        </div>
+        <div class="panel" style="flex: 1;">
+          <div class="screen-note" style="margin-bottom: 10px;">Recent corrections</div>
+          <div id="corrections-feed"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLOSE & PAY ===== -->
+    <section class="screen" id="screen-close">
+      <h1>Close &amp; pay</h1>
+      <div class="stepper">draft &rarr; reviewed &rarr; closed &rarr; paid</div>
+      <div class="panel" id="close-rows"></div>
+    </section>
+
+    <!-- ===== CATEGORIES & UNITS ===== -->
+    <section class="screen" id="screen-categories">
+      <h1>Categories</h1>
+      <div class="screen-note">config-driven bill types, each with one or more units</div>
+      <div class="panel" id="categories-list"></div>
+      <div class="add-form" style="flex-wrap: wrap;">
+        <input type="text" id="new-cat-name" placeholder="name, e.g. Eggs" style="width: 130px;">
+        <select id="new-cat-type">
+          <option value="QUANTITY_RATE">Quantity + rate</option>
+          <option value="VARIABLE_AMOUNT">Variable amount</option>
+          <option value="FIXED_MONTHLY">Fixed monthly</option>
+        </select>
+        <span id="new-cat-unit-wrap" style="display: inline-flex; gap: 8px; align-items: center;">
+          <select id="new-cat-unit"></select>
+          <input type="number" id="new-cat-rate" placeholder="rate, optional" style="width: 90px;">
+        </span>
+        <span id="new-cat-fixed-wrap" style="display: none; gap: 8px; align-items: center;">
+          <input type="number" id="new-cat-fixed-amount" placeholder="amount / month" style="width: 110px;">
+        </span>
+        <button id="add-category-btn">+ Add category</button>
+      </div>
+
+      <h1 class="section-gap">Units master</h1>
+      <div class="screen-note">shared across categories</div>
+      <div class="panel" id="units-list"></div>
+      <div class="add-form">
+        <input type="text" id="new-unit-code" placeholder="code, e.g. BOX" style="width: 90px;">
+        <input type="text" id="new-unit-name" placeholder="name, e.g. Boxes" style="width: 140px;">
+        <button id="add-unit-btn">+ Add unit</button>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
